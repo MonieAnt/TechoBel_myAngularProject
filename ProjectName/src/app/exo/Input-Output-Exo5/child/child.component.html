@@ -1,0 +1,23 @@
+
+<td>
+    {{ id }}
+</td>
+<td>
+    {{ last_name }}
+</td>
+<td>
+    {{ first_name }}
+</td>
+<td>
+    {{ country }}
+</td>
+<td>
+    {{ city }}
+</td>
+<td>
+    {{ btc_adress }}
+</td>
+
+<button (click)="showInput(first_name)" class="btn blue">Update First Name</button>
+<input *ngIf="triggerInputName" type="text" [(ngModel)]="newFirstName">
+<button *ngIf="triggerInputName" (click)="saveOnParent(id)" class="btn green">Valider</button>

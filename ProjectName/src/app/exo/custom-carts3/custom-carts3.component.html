@@ -1,0 +1,60 @@
+<h4>Exos 3 : Le panier de courses V1.0</h4>
+<p class="left-align light"></p>
+
+<div class="row">
+    <div class="col m6">
+        <div class="card blue-grey darken-1 col m12">
+            <div class="card-content white-text col m12">
+                <span class="card-title">Listes des produits ( {{ listProducts.length }} )</span>
+                <table class="striped black-text highlight">
+                    <thead>
+                        <tr>
+                            <th>N° code</th>
+                            <th>Nom</th>
+                            <th>Prix Unitaire</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of listProducts">
+                            <td>{{product.id}}</td>
+                            <td>{{product.name | titlecase}}</td>
+                            <td>{{product.priceU }}</td>
+                            <td>
+                                <button 
+                                    (click)="addProduct(product.id)"
+                                    class="btn-floating btn-large waves-effect waves-light red"
+                                >
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col m6">
+        <div class="card blue-grey darken-1 col m12">
+            <div class="card-content white-text col m12">
+                <span class="card-title">Mon Panier <b *ngIf="cart.length < 1">VIDE</b></span>
+                <ul class="collection black-text">
+                    <li *ngFor="let item of cart" class="collection-item">
+                        {{ item.product.name }} - {{ item.qty }} - P/U : {{ item.product.priceU }}
+                        <button 
+                            (click)="removeProd(item.product.id)"
+                            class="btn-floating btn-small waves-effect waves-light red"
+                        >
+                            <i class="material-icons">remove</i>
+                        </button>
+                    </li>
+
+                    <li class="collection-item active">Total HTVA : {{ totalHtva | number : '1.2-2' }}</li>
+                    <li class="collection-item active">TVA 21%</li>
+                    <li class="collection-item active">Total TVAC : {{ totalTvac | number : '1.2-3' }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

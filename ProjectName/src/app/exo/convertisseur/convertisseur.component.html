@@ -1,0 +1,62 @@
+
+<!-- 
+Exos 2 : dans un compo exos2, vous devrez recevoir du client un nombre de secondes.
+Il sera affiché avec un pipe custom qui le convertira manuellement ! En jj:hh:mm:ss, 
+un autre pipe dans une autre balise se chargera de convertir le nombre de secondes 
+entré par l'utilisateur température ferenheight. 
+Quand une troisième ligne pipee permettra d'inverser le sens de ce nombre de secondes également. 
+Vous aurez donc 3 pipe custom affiché sur 3 lignes différentes sur base de 1 valeur entrée.
+
+Pour les plus avancés, créer un pipe custom convertisseur de devises. 
+Eur vers dollars ou canadien ou yen ou autre =) faites en 3 4 histoires de se marrer
+ -->
+
+<main>
+
+    <div class="row">
+        <div class="col m3">
+          <div class="title">
+            <h2 class="rotate">My Super</h2>
+            <h2>Convertor</h2>
+          </div>  
+        </div>
+
+        <div class="col m6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Convertor : </span>
+                    <input type="number" [(ngModel)]="nb" [(ngModel)]="nbSecondUser">
+                    <p><i class="tiny material-icons">access_alarm</i> {{nb | secondToYearMonthDays }}</p>
+                    <br>
+                    <p><i class="tiny material-icons">brightness_low</i> {{ nb | convertDegres }}</p>
+                    <br>
+                    <p><i class="tiny material-icons">compare_arrows</i> {{ nb | invertor }}</p>
+                    <br>
+                    <p><i class="tiny material-icons">monetization_on</i> {{ nb | currencyConvertor : toCurrency }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col m6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Currency Convertor :</span>
+                    <div class="input-field col s12">
+                        <select [(ngModel)]="toCurrency">
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="USD">USD $</option>
+                          <option value="BTC">BTC</option>
+                          <option value="ETH">ETH</option>
+                        </select>
+                        <label>Choississez votre devise pour convertir : </label>
+                    </div>
+                    <p class="blue-grey darken-3">De Euros vers {{ toCurrency }}  : {{ nbSecondUser | currencyConvertor : toCurrency }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        
+        
+
+ </main>

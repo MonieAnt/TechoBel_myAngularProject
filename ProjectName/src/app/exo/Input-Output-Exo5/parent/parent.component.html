@@ -1,0 +1,73 @@
+<main>
+
+    <div class="row">
+      <div class="col m2">
+        <div class="title">
+          <h2 class="rotate">Exo N°5</h2>
+          <h4>Input / Output</h4>
+        </div>  
+      </div>
+  
+      <div class="col m10">
+            <div class="col m12">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Select from DataBase :</span>
+                  <label for="">Chercher par numéro de membre : </label>
+                    <input id="first_name" type="number" class="validate" placeholder="Type your text here">
+                </div>
+                <div class="card-action">
+                  <p>Trier la liste ci-dessous :</p>
+                  <i style="cursor: pointer;" (click)="reverseSort()" class="material-icons small">sort</i>
+
+                  <table class="striped responsive-table">
+                    <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>First Name</th>
+                          <th>Country</th>
+                          <th>City</th>
+                          <th>BTC Adress</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr *ngFor="let user of myListPersonExo"
+                            [id] = "user.id"
+                        >
+                            <td>{{ user.id }}</td>
+                        </tr> -->
+                        <!-- <tr *ngFor="let user of myListPersonExo" [last_name] = "user.last_name">
+                            <td>{{user.last_name}}</td>
+                        </tr> -->
+                          <tr app-child2
+                            *ngFor="let user of myListPersonExo"
+                            [id]="user.id"
+                            [last_name]="user.last_name"
+                            [first_name]="user.first_name"
+                            [country]="user.country"
+                            [city]="user.city"
+                            [btc_adress]="user.btc_adress"
+                            (clickOnChildUpdateFirstName)="updateChildFirstName($event)"
+                            >
+                          </tr>                     
+                    
+                    </tbody>
+                  </table>
+
+                  <!-- <app-child2
+                        *ngFor="let person of listPerson"
+                        [id_person]="person.id"
+                        [first_name]="person.first_name"
+                        (clickOnChildDelete)="deleteChildById($event)"
+                        (clickOnChildUpdateFirstName)="updateChildFirstName($event)"
+                    >
+                    </app-child2> -->
+                </div>
+              </div>
+            </div>
+      </div>
+  
+  
+    </div>
+</main>

@@ -1,0 +1,61 @@
+<main>
+
+  <div class="row">
+    <div class="col m3">
+      <div class="title">
+        <h2 class="rotate">Two Ways</h2>
+        <h2>Binding</h2>
+      </div>  
+    </div>
+
+    <div class="col m9">
+      <div class="row">
+        <div class="col m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Ma var 1 = {{ var1 }}</span>
+              <input type="checkbox" [(ngModel)]="var1">
+              <span>Boolean</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Ma var 2 = {{ var2 }}</span>
+              <input type="text" [(ngModel)]="var2">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Ma var 3 = {{ var3 }}</span>
+              <input type="number" [(ngModel)]="var3">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col m12">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              
+              <span class="card-title">Vous écrivez ce login : {{ login }}</span>
+              <span class="card-title">Vous écrivez ce mdp : {{mdp}}</span>
+              
+              <input type="text" pInputText [(ngModel)]="login">
+              <input type="text" pInputText [(ngModel)]="mdp">
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  </main>
+  

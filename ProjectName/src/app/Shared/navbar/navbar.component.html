@@ -1,0 +1,76 @@
+
+<!-- Dropdown Structure MAIN -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a routerLink="demo/binding1">1. One Way Binding</a></li>
+  <li><a routerLink="demo/two-ways-binding2">2. Two Ways Bindings</a></li>
+  <li><a routerLink="demo/eventbinding3">3. Event Binding</a></li>
+  <li><a routerLink="demo/four0four4">4. Four 0 Four</a></li>
+  <li><a routerLink="demo/propertymodel5">5. Property Model</a></li>
+  <li><a routerLink="demo/thepipe6">6. The Pipes</a></li>
+  <li><a routerLink="demo/custompipes7">7. The Custom Pipes</a></li>
+  <li><a routerLink="demo/structuralsDirectives8">8. Structural Directives</a></li>
+  <li><a routerLink="demo/attributes-directives9">9. Attributes Directives</a></li>
+  <li><a routerLink="demo/attributes-directives-custom10">10. Attributes Directives Custom</a></li>
+  <li><a routerLink="demo/input-output11">11. Input / Output</a></li>
+  <li><a routerLink="demo/di12">12. Injection de Dépendances</a></li>
+
+</ul>
+
+<ul id="dropdown2" class="dropdown-content">
+  <li><a routerLink="exo/calculette">1. Calculatrice</a></li>
+  <li><a routerLink="exo/convertisseur">2. Convertisseur</a></li>
+  <li><a routerLink="exo/customCards3">3. Custom Cards</a></li>
+  <li><a routerLink="exo/customs-directives4">4. Custom Direcitves</a></li>
+  <li><a routerLink="exo/in-out-exo5">5. In/Out</a></li>
+</ul>
+
+<!-- Dropdown Structure Mobile -->
+
+<ul id="dropdownmob1" class="dropdown-content">
+  <li><a routerLink="demo/binding1">1. One Way Binding</a></li>
+  <li><a routerLink="demo/two-ways-binding2">2. Two Ways Bindings</a></li>
+  <li><a routerLink="demo/eventbinding3">3. Event Binding</a></li>
+  <li><a routerLink="demo/propertymodel5">5. Property Model</a></li>
+  <li><a routerLink="demo/thepipe6">6. The Pipes</a></li>
+  <li><a routerLink="demo/custompipes7">7. The Custom Pipes</a></li>
+  <li><a routerLink="demo/structuralsDirectives8">8. Structural Directives</a></li>
+  <li><a routerLink="demo/attributes-directives9">9. Attributes Directives</a></li>
+  <li><a routerLink="demo/attributes-directives-custom10">10. Attributes Directives Custom</a></li>
+  <li><a routerLink="demo/input-output11">11. Input / Output</a></li>
+  <li><a routerLink="demo/di12">12. Injection de Dépendances</a></li>
+</ul>
+
+<ul id="dropdownmob2" class="dropdown-content">
+  <li><a routerLink="exo/calculette">1. Calculatrice</a></li>
+  <li><a routerLink="exo/convertisseur">2. Convertisseur</a></li>
+  <li><a routerLink="exo/customCards3">3. Custom Cards</a></li>
+  <li><a routerLink="exo/customs-directives4">4. Custom Direcitves</a></li>
+  <li><a routerLink="exo/in-out-exo5">5. In/Out</a></li>
+</ul>
+
+
+<nav>
+  <div class="nav-wrapper teal lighten-2">
+    <!-- <a href="#!" class="brand-logo">my Angular App</a> -->
+      <img src="/assets/img/Angular_full_color_logo.svg" alt="Logo Angular">
+
+    <!-- Dropdown MAIN -->
+    <ul class="right hide-on-med-and-down">
+      <li><a routerLink="">Home<i class="material-icons left">home</i></a></li>
+  
+        <!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Démos<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Exos<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+
+    <!-- Dropdown MOBILE -->
+
+    <ul id="nav-mobile" class="sidenav">
+      <li><a routerLink="">Home</a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdownmob1">Démos<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdownmob2">Exos<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+    <a routerLink="" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons blue-text text-darken-2">menu</i></a>
+
+  </div>
+</nav>

@@ -1,0 +1,94 @@
+<h4>Les Directives structurelles : comment manipuler le template avec des directives if et for</h4>
+<p class="left-align light">
+    Attention que le *ngIf se place dans la balse html et la conditionne comme existant ou pas ! toujours sur le même principe qu'un if... (boolean)<br>
+    Le ng for est une boucle sur structure de type for of !<br>
+    Le ng-container permet de ne pas avoir de balise réel mais de prévoir une structure de fond pour le if.<br>
+    Attention que le ngFor et le ngIf ne peuvent pas être dans la même balise !<br>
+    
+</p>
+
+
+<div class="row">
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">le if : *ngIf -> conditionnel sur la structure</span>
+                <button *ngIf="!opened" (click)="triggerParagraph()" class="btn green darken-1">Afficher</button>
+                <button *ngIf="opened" (click)="triggerParagraph()" class="btn red darken-1">Fermer</button>
+                <p *ngIf="opened">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam rem voluptatem ducimus soluta, recusandae totam ratione a obcaecati omnis. Vitae labore vel nihil similique facere architecto facilis quod nulla tempore.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">le for : *ngFor -> répétition sur la structure</span>
+                <ul class="collection black-text">
+                    <li *ngFor="let item of datasList" class="collection-item">
+                        {{ item }}
+                    </li>
+
+                    <!--
+                        for(let item of datasList){
+                            <li> append(item) </li>
+                        }
+                    -->
+                </ul>
+
+                <ul class="collection black-text">
+                    <li *ngFor="let user of userList" class="collection-item">
+                        <ng-container *ngIf="user.role != 'admin'">
+                            {{ user.name }} - à le rôle : {{user.role}}
+                        </ng-container>
+                    </li>
+                </ul>
+                <!--
+                    for(let item of datasList)
+                    {
+                        if(role != 'admin')
+                            <li> append(item) </li>
+                    }
+                -->
+
+                <table class="highlight striped white black-text">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Nom</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of userList; let i = index">
+                            <td>{{ i+1 }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.role }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">le for : *ngFor -> répétition sur la structure</span>
+                <table class="highlight striped white black-text">
+                    <tbody>
+                        <tr *ngFor="let prod of product | keyvalue">
+                            <td>{{ prod.key }}</td>
+                            <td>{{ prod.value }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre>ne pas confondre avec ce truc de débug!{{ product | json }}</pre>
+            </div>
+        </div>
+    </div>
+
+</div>

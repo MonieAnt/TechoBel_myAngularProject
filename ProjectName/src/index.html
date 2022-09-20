@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ProjectName</title>
+  <base href="./">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+  <app-root></app-root> <!-- Sélecteur Angular de type App.Root / C'est ici qu'on injecte l'Angular -->
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/bird.js"></script>
+  <script src="https://kit.fontawesome.com/f9f86a4488.js" crossorigin="anonymous"></script>
+
+<script> // Script pour DropDown Nav
+    $( document ).ready(function(){
+      $(".dropdown-trigger").dropdown({hover: false});
+    })
+</script>
+
+<script> // Script pour Select Form 
+     $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
+
+<script>  // Script pour Footer Hidden
+    $(window).scroll(function(event) {
+	function footer() {
+        var scroll = $(window).scrollTop(); 
+        if(scroll > 50) { 
+            $(".footer-nav").fadeIn("slow").addClass("show");
+        } else {
+            $(".footer-nav").fadeOut("slow").removeClass("show");
+        }
+        
+        clearTimeout($.data(this, 'scrollTimer'));
+        $.data(this, 'scrollTimer', setTimeout(function() {
+            if ($('.footer-nav').is(':hover')) {
+	        	footer();
+    		    } else {
+            	$(".footer-nav").fadeOut("slow");
+            }
+		}, 2000));
+    }
+    footer();
+});
+</script>
+
+
+
+</body>
+</html>

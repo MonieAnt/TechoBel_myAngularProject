@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+.block {
+    height: 90vh;
+}
+.header img {
+    width: 100%;
+}
+.footer-nav {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.show, .footer-nav:hover {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.col > a, .col > p {
+    margin-right: 1em;
+}

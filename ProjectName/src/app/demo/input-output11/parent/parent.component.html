@@ -1,0 +1,23 @@
+<h4>Input Output -> ou comment faire intéragir deux composants</h4>
+<p class="left-align light"></p>
+
+<div class="row">
+    <div class="col m12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content" style="text-align: left;">
+                <span class="card-title">PARENT -> ENFANT !!!! Input()</span>
+                <i style="cursor: pointer;" (click)="reverseSort()" class="material-icons medium">sort</i>
+                <ul class="collection ">
+                    <app-child
+                        *ngFor="let person of listPerson"
+                        [id_person]="person.id"
+                        [first_name]="person.first_name"
+                        (clickOnChildDelete)="deleteChildById($event)"
+                        (clickOnChildUpdateFirstName)="updateChildFirstName($event)"
+                    >
+                    </app-child>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

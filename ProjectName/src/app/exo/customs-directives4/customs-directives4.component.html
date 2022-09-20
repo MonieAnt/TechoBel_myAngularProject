@@ -1,0 +1,71 @@
+<h4>Exos 3 : Le panier de courses V1.0</h4>
+<p class="left-align light"></p>
+
+<div class="row">
+    <div class="col m6">
+        <div class="card blue-grey darken-1 col m12">
+            <div class="card-content white-text col m12">
+                <span class="card-title">Listes des produits ( {{ listProducts.length }} )</span>
+                <table class="striped black-text highlight">
+                    <thead>
+                        <tr>
+                            <th>N° code</th>
+                            <th>Nom</th>
+                            <th>Prix Unitaire</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of listProducts">
+                            <td>{{product.id}}</td>
+                            <td>{{product.name | titlecase}}</td>
+                            <td>{{product.priceU }}</td>
+                            <td>
+                                <button 
+                                    appToasterPerso
+                                    (click)="addProduct(product.id)"
+                                    class="btn-floating btn-large waves-effect waves-light red"
+                                >
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col m6">
+        <div class="card blue-grey darken-1 col m12">
+            <div class="card-content white-text col m12">
+                <span class="card-title">Mon Panier <b *ngIf="cart.length < 1">VIDE</b></span>
+                <ul class="collection black-text">
+                    <li appBolder content="item" *ngFor="let item of cart" class="collection-item">
+                        {{ item.product.name }} - {{ item.qty }} - P/U : {{ item.product.priceU }}
+                        <button 
+                            (click)="removeProd(item.product.id)"
+                            class="btn-floating btn-small waves-effect waves-light red"
+                        >
+                            <i class="material-icons">remove</i>
+                        </button>
+                    </li>
+
+                    <li class="collection-item active">Total HTVA : {{ totalHtva | number : '1.2-2' }}</li>
+                    <li class="collection-item active">TVA 21%</li>
+                    <li class="collection-item active">Total TVAC : {{ totalTvac | number : '1.2-3' }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col m12">
+        <div class="card blue-grey darken-1 col m12">
+            <div class="card-content white-text col m12">
+                <span class="card-title">Mon paragraphe de ouf</span>
+                <p appBoundedParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione temporibus exercitationem distinctio! Laborum minus facilis quam ipsum porro nulla dolorem reiciendis. Quod molestiae delectus omnis voluptates quia sunt? Similique consequuntur odit doloremque quae ad. Quod incidunt fugit corrupti aut et consectetur error possimus a harum quas recusandae labore nemo esse minima, quam exercitationem ipsam tempora adipisci sunt accusantium accusamus totam rerum reiciendis! Velit, beatae. Natus accusantium distinctio eligendi consectetur libero nulla error in, earum beatae? Numquam nesciunt deserunt similique. Nesciunt sed veritatis minima ullam hic sint maxime, error eligendi praesentium, suscipit impedit dolor veniam officia animi possimus fugiat aliquid culpa iure voluptatem! Aspernatur cumque perspiciatis deleniti eos, ipsum numquam fuga assumenda, quo, quae omnis deserunt. Dolores non consectetur distinctio sunt iure iste accusamus quas, nisi sit officia fugiat nesciunt commodi! Repellendus ab non vero temporibus harum atque commodi quas dolore sapiente. Nobis, cupiditate atque, rem culpa, in aperiam cum expedita quia ipsum laudantium quas recusandae. Blanditiis, pariatur quam! Doloremque ipsam cumque eum debitis sint minus saepe ducimus, ipsa ut dicta consectetur illum error a fuga aliquid laboriosam velit tempore recusandae praesentium possimus incidunt at aliquam quisquam? Atque optio expedita blanditiis error tempora. Ad labore voluptates minima molestiae assumenda, sint illo cumque commodi animi consequatur quidem laudantium officia accusamus fugiat amet a corporis rerum necessitatibus dolorum placeat dolorem fugit. Molestias numquam ullam ipsa sed debitis. Asperiores impedit aperiam laudantium. Suscipit perspiciatis earum dolorum reprehenderit quisquam, adipisci deleniti nemo soluta iusto harum assumenda explicabo, aliquid laborum quam beatae. Maxime quas ut earum unde atque et eaque vel reiciendis commodi. Dicta recusandae quidem cumque dignissimos architecto ratione odit. Sunt ab error cupiditate sapiente iure esse rem vel repudiandae nostrum neque animi, hic ipsum provident repellendus illo atque iusto molestias! Eos minima odio perferendis ab vel ut ducimus, vitae, quis voluptatibus provident, non minus. Eligendi atque tempore, provident accusantium veniam fuga. Sunt nemo aliquam culpa rerum, est, cupiditate asperiores enim voluptatem repellat consequatur placeat et cum totam nam laborum fugit vitae? Molestiae perferendis quo quia nobis delectus, minima earum corporis facere veniam iusto nihil eius doloribus tempora dolor ullam autem architecto ea modi quae enim praesentium sint consequatur libero. Sit neque necessitatibus officiis, molestias, architecto culpa praesentium error labore eius, fugiat laboriosam fugit quibusdam reiciendis illum placeat et nihil deleniti aliquid? Quos, velit rem vero quaerat voluptates corrupti eius ipsam! Eaque ab mollitia eius odit optio obcaecati minus in quidem molestiae, saepe quos illo! Atque reiciendis nihil repellat autem sapiente? Quia reiciendis officiis vel quo, vitae sapiente soluta maxime quidem tempore ea eius quis. Animi laudantium saepe ullam, culpa omnis quis excepturi sit vero ipsa. Quod voluptate eum, quasi officiis veniam quibusdam earum rerum, cum soluta fugit deserunt eos sit, voluptates consectetur. Similique, velit. Rem debitis aperiam ab beatae? Numquam ratione ipsam assumenda quibusdam, aliquam doloremque consequuntur totam facilis laudantium itaque similique nulla. Repellendus voluptatum dolore optio labore incidunt quasi sint molestiae animi est facilis fuga, tempora vel. Neque, ipsum, ipsa voluptatibus mollitia ea distinctio quasi veritatis perspiciatis quidem vel doloribus libero molestias vitae.</p>
+            </div>
+        </div>
+    </div>
+</div>

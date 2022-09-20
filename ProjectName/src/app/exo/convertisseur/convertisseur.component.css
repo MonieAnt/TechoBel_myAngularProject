@@ -1,0 +1,30 @@
+main {
+    margin-top: 2em;
+    width: 100%;
+}
+
+
+h2 {
+    font-size: 100px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    line-height: 1;
+}
+  
+.rotate {
+     transform: rotate(180deg);
+}
+  
+.title {
+    display: flex;
+    height: 80vh;
+    justify-content: left;
+    align-content: center;
+    grid-template-columns: max-content max-content;
+    font-family: 'didot';
+    margin-top: -5em;
+}
+
+i {
+    margin-right: 10px;
+}
