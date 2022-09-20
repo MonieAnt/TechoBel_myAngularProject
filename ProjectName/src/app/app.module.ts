@@ -40,8 +40,12 @@ import { CalculetteComponent } from './exo/calculette/calculette.component';
 import { ConvertisseurComponent } from './exo/convertisseur/convertisseur.component';
 import { Exos3CustomCartsComponent } from './exo/custom-carts3/custom-carts3.component';
 import { CustomsDirectives4Component } from './exo/customs-directives4/customs-directives4.component';
+// Exo 5
 import { ParentComponentExo } from "./exo/Input-Output-Exo5/parent/parent.component";
 import { ChildComponentExo } from "./exo/Input-Output-Exo5/child/child.component";
+// Exo 6
+import { CartComponent } from './exo/shop-exo6/cart/cart.component';
+import { ProductComponent } from './exo/shop-exo6/product/product.component';
 
 // Pipes :
 import { PowPipe } from './demo/custompipes7/pow.pipes';
@@ -91,7 +95,9 @@ M.AutoInit()
     // Exo 5
     ParentComponentExo,
     ChildComponentExo,
-    Di12Component
+    Di12Component,
+    CartComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

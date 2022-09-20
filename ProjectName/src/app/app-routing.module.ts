@@ -18,6 +18,7 @@ import { CustomsDirectives4Component } from './exo/customs-directives4/customs-d
 import { ParentComponent } from './demo/input-output11/parent/parent.component';
 import { ParentComponentExo } from './exo/Input-Output-Exo5/parent/parent.component';
 import { Di12Component } from './demo/di12/di12.component';
+import { CartComponent } from './exo/shop-exo6/cart/cart.component';
 
 const routes: Routes = [                              // A rajouter pour le routeur HomeComponent.
   {path: "", component: HomeComponent},
@@ -52,7 +53,8 @@ const routes: Routes = [                              // A rajouter pour le rout
     {path:"convertisseur", component: ConvertisseurComponent},
     {path:"customCards3", component: Exos3CustomCartsComponent},
     {path:"customs-directives4", component: CustomsDirectives4Component},
-    {path: "in-out-exo5", component: ParentComponentExo}
+    {path: "in-out-exo5", component: ParentComponentExo},
+    {path: "shop-exo6", component: CartComponent}
   ]},
   
   {path: "**", component: Four0four4Component}   // Pour rediriger vers page 404

@@ -18,6 +18,6 @@
     {{ btc_adress }}
 </td>
 
-<button (click)="showInput(first_name)" class="btn blue">Update First Name</button>
+<button (click)="showInput(first_name)" class="btn blue">Update</button>
 <input *ngIf="triggerInputName" type="text" [(ngModel)]="newFirstName">
 <button *ngIf="triggerInputName" (click)="saveOnParent(id)" class="btn green">Valider</button>

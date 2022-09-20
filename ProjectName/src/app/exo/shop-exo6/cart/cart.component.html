@@ -1,0 +1,36 @@
+<main>
+
+    <div class="row">
+      <div class="col m2">
+        <div class="title">
+          <h2 class="rotate">Exo N°6</h2>
+          <h4>Panier Course V2.0</h4>
+        </div>  
+      </div>
+
+      <div class="col m9">
+        <div class="card blue-grey darken-1 col m12">
+            <div class="card-content white-text col m12">
+                <span class="card-title">Listes des produits ( {{ listProduct.length }} )</span>
+                <table class="striped black-text highlight">
+                    <thead>
+                        <tr>
+                            <th>N° code</th>
+                            <th>Nom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr 
+                            app-product
+                            *ngFor="let product of listProduct"
+                            [productChild] = "product"
+                            (clickOnChildDelete)= "clickDelete($event)"
+                        ></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+
+    </div>
+</main>
