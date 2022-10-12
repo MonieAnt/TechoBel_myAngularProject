@@ -283,6 +283,10 @@ body.hovered {
     src: url(../fonts/SpongeboyRegular-gx2n6.otf);
 }
 
+main {
+  background-color: #073b2fbe;
+}
+
 #title {
   display: flex;
   justify-content: center;

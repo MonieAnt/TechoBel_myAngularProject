@@ -17,8 +17,10 @@ import { AttributesDirectivesCustom10Component } from './demo/attributes-directi
 import { CustomsDirectives4Component } from './exo/customs-directives4/customs-directives4.component';
 import { ParentComponent } from './demo/input-output11/parent/parent.component';
 import { ParentComponentExo } from './exo/Input-Output-Exo5/parent/parent.component';
-import { Di12Component } from './demo/di12/di12.component';
-import { CartComponent } from './exo/shop-exo6/cart/cart.component';
+import { UnComponent } from './demo/obs20/un/un.component';
+import { DeuxComponent } from './demo/obs20/deux/deux.component';
+import { TroisComponent } from './demo/obs20/trois/trois.component';
+import { Exos6PromiseComponent } from './exo/promise-exo6/promise-exo6.component';
 
 const routes: Routes = [                              // A rajouter pour le routeur HomeComponent.
   {path: "", component: HomeComponent},
@@ -45,7 +47,9 @@ const routes: Routes = [                              // A rajouter pour le rout
     {path: "attributes-directives9", component: AttributesDirectives9Component},
     {path: "attributes-directives-custom10", component: AttributesDirectivesCustom10Component},
     {path: "input-output11", component : ParentComponent},
-    {path: "di12", component: Di12Component}
+    {path: "obs20.1", component: UnComponent},
+    {path: "obs20.2", component: DeuxComponent},
+    {path: "obs20.3", component: TroisComponent},
   ]},
 
   {path: "exo", children : [
@@ -54,7 +58,7 @@ const routes: Routes = [                              // A rajouter pour le rout
     {path:"customCards3", component: Exos3CustomCartsComponent},
     {path:"customs-directives4", component: CustomsDirectives4Component},
     {path: "in-out-exo5", component: ParentComponentExo},
-    {path: "shop-exo6", component: CartComponent}
+    {path: "promise-exo6", component: Exos6PromiseComponent},
   ]},
   
   {path: "**", component: Four0four4Component}   // Pour rediriger vers page 404

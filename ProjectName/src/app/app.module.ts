@@ -33,7 +33,6 @@ import { AttributesDirectives9Component } from './demo/attributes-directives9/at
 import { AttributesDirectivesCustom10Component } from './demo/attributes-directives-custom10/attributes-directives-custom10.component';
 import { ParentComponent } from './demo/input-output11/parent/parent.component';
 import { ChildComponent } from './demo/input-output11/child/child.component';
-import { Di12Component } from './demo/di12/di12.component';
 
 // Exos :
 import { CalculetteComponent } from './exo/calculette/calculette.component';
@@ -44,8 +43,7 @@ import { CustomsDirectives4Component } from './exo/customs-directives4/customs-d
 import { ParentComponentExo } from "./exo/Input-Output-Exo5/parent/parent.component";
 import { ChildComponentExo } from "./exo/Input-Output-Exo5/child/child.component";
 // Exo 6
-import { CartComponent } from './exo/shop-exo6/cart/cart.component';
-import { ProductComponent } from './exo/shop-exo6/product/product.component';
+
 
 // Pipes :
 import { PowPipe } from './demo/custompipes7/pow.pipes';
@@ -53,6 +51,10 @@ import { ConvertDegresPipe } from './exo/convertisseur/convertDegres.pipe';
 import { CurrencyConvertorPipe } from './exo/convertisseur/currencyConvertor.pipe';
 import { InvertorPipe } from './exo/convertisseur/invertor.pipe';
 import { SecondToYearMonthDaysPipe } from "./exo/convertisseur/convertTime.pipe";
+import { UnComponent } from './demo/obs20/un/un.component';
+import { DeuxComponent } from './demo/obs20/deux/deux.component';
+import { TroisComponent } from './demo/obs20/trois/trois.component';
+import { Exos6PromiseComponent } from './exo/promise-exo6/promise-exo6.component';
 // ******************************************************
 
 
@@ -92,12 +94,19 @@ M.AutoInit()
     CustomsDirectives4Component,
     ParentComponent,
     ChildComponent,
+    
+    // Demo Obs 20
+    UnComponent,
+    DeuxComponent,
+    TroisComponent,
     // Exo 5
     ParentComponentExo,
     ChildComponentExo,
-    Di12Component,
-    CartComponent,
-    ProductComponent
+    
+    // Exo 6 :
+    Exos6PromiseComponent,
+
+    
   ],
   imports: [
     BrowserModule,
